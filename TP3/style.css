@@ -1,0 +1,128 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    background-color: rgb(22, 68, 46);
+    color: goldenrod;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+.checkboxLabel {
+    font-weight: normal;
+}
+
+input, select, option {
+    background: rgba(169, 169, 169, 0.50);
+    color: white;
+    border-radius: 7px;
+}
+
+option {
+    color: black;
+}
+
+/* Section recherche */
+#recherche {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+    #recherche select,
+    #recherche input:not(input[type="checkbox"]) {
+        font-size: 1rem;
+        padding: 10px;
+        margin: 10px 0;
+    } 
+
+    #recherche select {
+        width: 300px;
+    }
+
+    #recherche #listeCours {
+        margin: 0 0 15px 0;
+    }
+
+        #recherche #listeCours label:first-child {
+            text-decoration: underline;
+            display: block;
+            margin: 5px 0 10px 0;
+        } 
+
+        #recherche #listeCours .coursCheckbox {
+            margin-right: 7px;
+        }
+
+button {
+    width: 150px;
+    font-size: 1rem;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: lightgrey;
+}
+
+button:active {
+    background-color: goldenrod;
+}
+
+/* Liste des étudiants (table) */
+#tableEtudiants {
+  width: 100%;
+  background-color: rgba(169, 169, 169, 0.70);
+  border-collapse: collapse;
+  border-width: 2px;
+  border-style: solid;
+  color: black;
+  font-size: 1.025em;
+  margin: 25px 0;
+}
+
+    #tableEtudiants thead {
+        background-color: goldenrod;
+    }
+
+    #tableEtudiants tr:hover {
+        background-color: rgba(218, 165, 32, 0.25);
+    }
+
+    #tableEtudiants td, #tableEtudiants th {
+        border: none;
+        border-width: 2px;
+        font-size: 0.9em;
+        border-style: solid;
+        padding: 7px;
+        text-align: center;
+    }
+
+    #tableEtudiants .coursEtudiant {
+        text-align: left;
+    }
+
+.hidden {
+    display: none
+}
+
+/* RWD */
+@media only screen and (min-width: 960px) {
+    input:not(input[type="checkbox"]) {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    input:not(input[type="checkbox"]) {
+        width: 300px;
+    }
+
+    #recherche select {
+        width: 200px;
+    }
+}

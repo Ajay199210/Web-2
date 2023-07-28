@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validations.js"></script>
+</head>
+<body>
+    <div id="page">
+        <h1>Formulaire d'absence</h1> 
+
+        <!-- le div suivant sert comme un conteneur afin d'afficher toutes les erreurs de validations (s'il y en a)
+            ou un le message de succès -->
+        <div id="resultatsSoumission">
+            <span class="msgErreur" id="errNom"></span>
+            <span class="msgErreur" id="errPrenom"></span>
+            <span class="msgErreur" id="errCode"></span>
+            <span class="msgErreur" id="errProgrammeEtude"></span>
+            <span class="msgErreur" id="errTel"></span>
+            <span class="msgErreur" id="errCourriel"></span>
+            <span class="msgErreur" id="errAdresse"></span>
+            <span class="msgErreur" id="errRaisonAbsence"></span>
+            <span id="success"></span>
+            <a id="nouvForm" href="" class="hidden">Envoyer un nouveau formulaire</a>
+        </div> 
+
+        <!-- Un bouton pour remplir/vider automatiquement le formulaire (pour le test) -->
+        <button id="btnModifieForm">Remplir formulaire</button>
+        
+        <form id="formulaire">
+            <h3>Identification de l'étudiant(e)</h3>
+
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" autocomplete="new-text">
+
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom" autocomplete="off">
+
+            <label for="codeEtudiant">Code étudiant</label>
+            <input type="text" name="codeEtudiant" id="codeEtudiant" autocomplete="off" placeholder="e.g. 123456">
+
+            <label for="programmeEtude">Programme d'étude</label>
+            <input type="text" name="programmeEtude" id="programmeEtude" autocomplete="off">
+
+            <br /><br />
+
+            <h3>Coordonnées durant l'absence</h3>
+
+            <label for="tel">Téléphone</label>
+            <input type="text" name="tel" id="tel" autocomplete="off" placeholder="e.g. 418 123 4567">
+
+            <label for="courriel">Adresse courriel</label>
+            <input type="text" name="courriel" id="courriel" autocomplete="off" placeholder="e.g. utilisateur@exemple.com">
+
+            <label for="adresse">Adresse</label>
+            <input type="text" name="adresse" id="adresse" class="adresse" autocomplete="off">
+
+            <button id="btnAjouterAdresse">Ajouter adresse</button>
+
+            <br /><br />
+
+            <h3>Raison de l'absence</h3>
+
+            <textarea name="raisonAbsence" id="raisonAbsence" cols="30" rows="10"></textarea>
+
+            <br />
+
+            <button id="btnSoumettre" value="soumettre">Soumettre</button>
+        </form>
+    <hr />
+        <footer>
+            &copy; Copyright 2023
+        </footer>
+    </div>
+</body>
+</html>

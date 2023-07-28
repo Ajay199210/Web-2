@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP4</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./Scripts/Voiture.js"></script>
+    <script src="./Scripts/Data.js"></script>
+    <script src="./Scripts/Utilitaires.js"></script>
+    <script src="./Scripts/Default.js"></script>
+</head>
+<body>
+    <div id="page">
+        <h1>Demande de location</h1> 
+
+        <!-- Lien pour enoyer un nouveau formulaire  -->
+        <a id="nouvForm" href="../TP4/index.html" class="hidden">Envoyer un nouveau formulaire</a>
+
+        <!-- Un bouton pour remplir/vider automatiquement le formulaire (pour le test) -->
+        <button id="btnModifieForm">Remplir formulaire</button>
+        
+        <form id="formulaire" method="post">
+            <h2>Informations personelles</h2>
+
+            <hr />
+            
+            <div class="formInput">
+                <label for="nom">Nom</label>
+                <span class="msgErreur" id="errNom"></span>
+                <input type="text" name="nom" id="nom" autocomplete="off">
+            </div>
+
+            <div class="formInput">
+                <label for="prenom">Prénom</label>
+                <span class="msgErreur" id="errPrenom"></span>
+                <input type="text" name="prenom" id="prenom" autocomplete="off">
+            </div>
+
+            <div class="formInput">
+                <label for="numTel">Numéro de téléphone</label>
+                <span class="msgErreur" id="errNumTel"></span>
+                <input type="text" name="numTel" id="numTel" autocomplete="off">
+            </div>
+
+            <div class="formInput">
+                <label for="dateNaissance">Date de naissance</label>
+                <label for="dateNaissance" class="formatInfoTip">(en format : DD-MM-YYYY) Le demandeur doit être âgé de 18 and ou plus</label>
+                <span class="msgErreur" id="errDateNaissance"></span>
+                <input type="text" name="dateNaissance" id="dateNaissance" autocomplete="off">
+            </div>
+
+            <br /><br />
+
+            <h2>Caractéristiques de la voiture</h2>
+
+            <hr />
+
+            <div class="formInput">
+                <label for="marque">Marque</label>
+                <span class="msgErreur" id="errMarque"></span>
+                <select name="marque" id="marque"> 
+                    <option value="">Choisir une marque</option>
+                    <!-- Construit dynamiquement la liste des voitures (options) disponibles -->
+                </select>
+            </div>
+
+            <div class="formInput">
+                <label for="distance">Distance estimée</label>
+                <span id="distanceEstimee" class="infosVoiture"></span>
+                <span class="msgErreur" id="errDistance"></span>
+                <input type="text" name="distance" id="distance" autocomplete="off">
+            </div>
+
+            <button id="btnSoumettre" value="soumettre">Soumettre la demande</button>
+            <div id="infosVoiture" class="infosVoiture"></div>
+        </form>
+
+        <footer>
+            &copy; H2023 - Pogrammation Web II
+        </footer>
+    </div>
+</body>
+</html>

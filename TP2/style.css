@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #252525;
+    color: lightgrey;
+    margin: 0;
+}
+
+#page {
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0 45px;
+    flex-wrap: wrap;
+    color: lightgrey;
+}
+
+h1 {
+    align-self: flex-start;
+    background-color: #252525;
+    color: lightgrey;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    border-right: 0;
+    border-left: 0;
+    margin: 25px auto;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+}
+
+form input {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0; 
+    background: #252525;
+    color: lightgrey;
+    border: 1px solid black;
+    box-shadow: 3px 3px darkgoldenrod;
+    border-radius: 3px;
+    font-size: 1.1em;
+}
+
+form label {
+    margin-top: 15px;
+    padding: 0;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form h3 {
+    text-decoration: underline;
+    margin: 25px 0px 5px 0;
+    color: #D4DBE2;
+    padding: 10px 0;
+    width: 50%;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 5px;
+    padding: 10px;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: darkgoldenrod;
+    box-shadow: 5px 5px 10px;
+    font-size: medium;
+    width: 17%;
+}
+
+button:hover {
+    background-color: darkgoldenrod;
+    color: black;
+}
+
+button:active {
+    background-color: rgb(175, 175, 175) !important;
+}
+
+/* Bouton pour remplir/vider le formulaire */
+button#btnModifieForm {
+    align-self: flex-start;
+    margin: 10px 0;
+}
+
+/* Bouton de soumission */
+button#btnSoumettre {
+    text-transform: uppercase;
+    margin: 5px auto 5px 0;
+    font-size: 1.1em;
+}
+
+textarea {
+    width: 50%;
+    background: #252525;
+    color: lightgrey;
+    padding: 10px;
+    margin: 10px auto 0 0;
+    font-size: 1.3em;
+    border: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px darkgoldenrod;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+/* Le bloc des messages quand on essaie de soumettre le formulaire */
+#resultatsSoumission {
+    color: orangered;
+    align-self: flex-start;
+    margin: 10px 0;
+}
+
+#resultatsSoumission .msgErreur {
+    display: block;
+}
+
+#success {
+    display: block;
+    color: yellowgreen;
+    font-size: 1.2em;
+}
+
+.erreur {
+    border: 1px solid orangered;
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+.disable {
+    background-color: #d3d3d325 !important;
+    color:rgb(175, 175, 175, 0.95) !important;
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+hr {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Le style du lien pour remplir un nouveau formulaire */
+#nouvForm {
+    font-size: 1.1em;
+    color: darkorange;
+}
+
+#nouvForm:active {
+    color: darkgoldenrod;
+}
+
+hr {
+    width: 100%;
+    margin: 25px auto;
+}
+
+footer {
+    margin-bottom: 10px;
+}
